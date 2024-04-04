@@ -10,7 +10,7 @@ load_dotenv()
 
 API_KEY = os.getenv('ALPHAVANTAGE_API_KEY')
 URL = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
-SYMBOLS = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'PEP']*5000
+SYMBOLS = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'PEP']*20
 results = []
 
 
