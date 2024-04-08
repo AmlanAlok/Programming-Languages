@@ -9,29 +9,27 @@ from collections import deque
 '''
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
         self.stack = deque()
-        self.stack.append(1)
         self.stack.append(2)
+        self.stack.appendleft(1)
         self.stack.append(3)
 
     '''Test Pop operation'''
+
     def test_01(self):
+        self.assertEqual(3, len(self.stack))
         self.assertEqual(1, self.stack[0])
         self.assertEqual(2, self.stack[1])
         self.assertEqual(3, self.stack[2])
         self.assertEqual(3, self.stack[-1])
+        self.stack.clear()
 
     '''Test Stack Underflow'''
-    def test_03(self):
+
+    def test_02(self):
         self.assertEqual(3, self.stack.pop())
         self.assertEqual(1, self.stack.popleft())
         self.assertEqual(2, self.stack.pop())
