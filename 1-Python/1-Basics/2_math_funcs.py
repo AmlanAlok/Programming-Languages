@@ -1,4 +1,5 @@
 import unittest
+import sys
 
 
 class MyTestCase(unittest.TestCase):
@@ -24,13 +25,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(max([1, 2, 3]), 3)
         self.assertEqual(min([1, 2, 3]), 1)
 
-    def test_strings_comparison(self):
-        """
-        In Python, the comparison operators (<, >, <=, >=) work with strings in this lexicographic order, which is
-        similar to how words are sorted in a dictionary.
-        """
-        self.assertEqual('marya' > 'mary', True)
-        self.assertEqual('abc' > 'acb', False)
+    def test_max_num(self):
+        max_num = sys.maxsize
+        self.assertEqual(9223372036854775807, max_num)
 
 
 if __name__ == '__main__':

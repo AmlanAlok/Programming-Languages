@@ -17,6 +17,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(is_empty([1]), False)
         self.assertEqual(is_empty([]), True)
 
+        self.assertEqual(len([1]) == 0, False)
+        self.assertEqual(len([]) == 0, True)
+
+        a = []
+        self.assertEqual(a == [1], False)
+        self.assertEqual(a == [], True)
+
     def test_empty_string(self):
         self.assertEqual(is_empty('Amlan'), False)
         self.assertEqual(is_empty(''), True)

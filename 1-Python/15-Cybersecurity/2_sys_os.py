@@ -2,7 +2,8 @@ import unittest
 import sys
 import os
 from collections import Counter
-
+import platform
+from platform import python_implementation, python_version_tuple
 
 class MyTestCase(unittest.TestCase):
 
@@ -70,6 +71,31 @@ class MyTestCase(unittest.TestCase):
 
         for extension, count in counts.items():
             print(f"{extension:8}{count}")
+
+    def test_platform(self):
+        operating_system = platform.system()
+        print(operating_system)
+
+        if operating_system == 'Darwin':
+            ping_cmd = 'ping -c 127.0.0.1'
+            print(ping_cmd)
+            net_cmd = 'ipconfig getifaddr en1'
+            print(net_cmd)
+
+        print(python_implementation())
+        for attribute in python_version_tuple():
+            print(attribute)
+
+    def test_file(self):
+        try:
+            with open('test.txt', 'w') as file:
+                file.write('this is a test file also')
+        except IOError as e:
+            print('Exception: Unable to write to file')
+        except Exception as e:
+            print('Another error occurred', e)
+        else:
+            print('File written to successfully')
 
 
 if __name__ == '__main__':
