@@ -8,14 +8,15 @@ load_dotenv()
 
 api_key = os.getenv('ALPHAVANTAGE_API_KEY')
 url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol={}&apikey={}'
-symbols = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'PEP', 'AAPL', 'GOOG', 'TSLA', 'MSFT', 'PEP', 'AAPL', 'GOOG', 'TSLA', 'MSFT']
+symbols = ['AAPL', 'GOOG', 'TSLA', 'MSFT', 'PEP']*1
 results = []
 
 
 def run_tasks():
     for symbol in symbols:
         response = requests.get(url.format(symbol, api_key))
-        results.append(response.json())
+        response_dict = response.json()
+        results.append(response_dict)
 
 
 print("Timer started...")
