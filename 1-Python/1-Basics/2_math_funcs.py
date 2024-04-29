@@ -29,6 +29,14 @@ class MyTestCase(unittest.TestCase):
         max_num = sys.maxsize
         self.assertEqual(9223372036854775807, max_num)
 
+    def test_01(self):
+        print('\n')
+        self.assertEqual(1000000000000000.0, 1e15)
+        self.assertEqual(1000000000000001.0, 1e15 + 1)
+        self.assertEqual(1e16, 1e16 + 1)
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
