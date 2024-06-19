@@ -25,6 +25,15 @@ int x, y, z;
 x = y = z = 50;
 System.out.println(x + y + z);
 
+char myVar1 = 65, myVar2 = 66, myVar3 = 67;
+System.out.println(myVar1);   // A
+System.out.println(myVar2);   // B
+System.out.println(myVar3);   // C
+
+String x = "10";
+int y = 20;
+String z = x + y;  // z will be 1020 (a String)
+
 /*
 https://www.w3schools.com/java/java_data_types.asp
 
@@ -38,8 +47,10 @@ Primitive data types - includes:
 7. boolean        1 bit	      Stores true or false values
 8. char           2 bytes	    Stores a single character/letter or ASCII values
 
-Non-primitive data types
-1. String
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c'
+
+Non-primitive data types (called reference types because they refer to objects)
+1. String - The String data type is used to store a sequence of characters (text). String values must be surrounded by double quotes.
 2. Arrays
 3. Classes
   */
