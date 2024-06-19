@@ -29,7 +29,7 @@ System.out.println(x + y + z);
 https://www.w3schools.com/java/java_data_types.asp
 
 Primitive data types - includes:
-1. byte           1 byte	    Stores whole numbers from -128 to 127
+1. byte           1 byte	     Stores whole numbers from -128 to 127
 2. short          2 bytes	    Stores whole numbers from -32,768 to 32,767
 3. int            4 bytes	    Stores whole numbers from -2,147,483,648 to 2,147,483,647
 4. long           8 bytes	    Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
